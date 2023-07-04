@@ -1,0 +1,18 @@
+
+
+  <div class="card m-3 border-dark p-2" style="width: 18rem; height: 27rem;">
+    <div class="proimg">
+      <img [src]="pro.proImg" class="card-img-top" [alt]="pro.proName">
+    </div>
+    <div class="card-body text-center">
+      <h3 class="card-title">{{pro.proName}}</h3>
+      <h4 class="card-title m-2">{{pro.proPrice | currency : 'USD'}}</h4>
+      <div class="quantitychange">
+        <button class="btn btn-danger" (click)="minus()"><i class="fa fa-minus"></i></button>
+        <input type="text" class="inlineblock text-center" [(ngModel)]="num" [value]="num" #inputnumber>
+        <button class="btn btn-info " (click)="plus()"><i class="fa fa-plus"></i></button>
+      </div>
+      <a class="btn btn-primary m-2" (click)="onClick()">Add to Bag</a>
+    </div>
+  </div>
+

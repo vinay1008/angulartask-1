@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="products col-12">
+            <app-product-item *ngFor="let product of productData" [pro]="product" (addpro)="add($event)"></app-product-item>
+        </div>
+            <div class="row mt-5">
+              <div class="col-12">
+                <h2>My Shopping Bag</h2>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Product Name</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price Details</th>
+                      <th scope="col">Ordertotal</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let add of addproduct">
+                      <th scope="row">{{add.proName}}</th>
+                      <td>{{add.number}}</td>
+                      <td>{{add.quantityaddprice | currency : 'USD'}}</td>
+                      <td>0.00</td>
+                      <td>**</td>
+                    </tr>
+                    
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+    </div>
+</div>
