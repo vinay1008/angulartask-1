@@ -2,7 +2,7 @@ import { BehaviorSubject, Subject } from "rxjs";
 import { Product } from "../model/product.model";
 
 export class ProductService{
-    productDataList : Product[] | any = [new Product("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2EsPOuMRA49A6rUzE1xBia7GSS4Ys9NWqsA&usqp=CAU","Black Forest Cake",350,5,350)]
+    productDataList : Product[] | any = [new Product("https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/47336/e-class-exterior-left-front-three-quarter.jpeg?q=75","Mercedes-Benz",100000,5,500000)]
 
     productSub = new BehaviorSubject(this.productDataList.slice());
     
